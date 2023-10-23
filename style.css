@@ -2,5 +2,15 @@ html{
     font-size: 80px;
     color: rgb(30, 8, 228);
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(133, 205, 250);
+    background-color: rgb(255, 166, 0);
+}
+.column{
+    /*Set additional styling options for the columns*/
+background-color:rgb(245, 182, 10);
+margin: 3%;
+padding: 6%;
+}
+
+*{
+    box-sizing: content-box;
 }
