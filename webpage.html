@@ -4,23 +4,105 @@
         <title> сайт </title>
         <link href="style.css" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href=".\img\mrbeast-mr.gif" type="image/x-icon">
+        
     </head>
-    <body>
+   <body>
         <script language="Javascript" src="script.js"></script>
-       
+       <h1>введите текст</h1>
         <div class="column">
-        <img src=".\img\mrbeast-mr.gif" alt="шайлушай3">
-        <img src=".\img\name_10237.jpg" alt="шайлушай3">
+            
+  <ul>
+    <li><a href="file:///C:/Users/Ученик/Desktop/saytnew/г%20л%20а%20в%20н%20а%20я.html">Г л а в н а я</a></li>
+    <li><a href="#">больше   информации:)</a></li>
+    <li><a href="#">очень хорошие люди</a></li>
+  </ul>
+</div>
+        
         <img src=".\img\1080x1920.jpg" alt="шайлушай3">
         <img src=".\img\i.webp" alt="шайлушай3">
+        <img src=".\img\name_10237.jpg" alt="шайлушай3"style="obgect">
         <img src=".\img\r.webp" alt="шайлушай3">
         <img src=".\img\t.webp" alt="шайлушай3">
         <img src=".\img\o.webp" alt="шайлушай3">
         <img src=".\img\q.webp" alt="шайлушай3">
-        <img src=".\img\j.webp" alt="шайлушай3">
-    </div>
-         <h1>ты можеш скачать рандомные картинки</h1>
-        <h2> <a href="file:///C:/Users/AdminSch22/Desktop/%D0%BA%D0%BE%D1%88%D0%B0%D0%BA/webpage.html"> кица </a> </h2>
+    
+
+        <aside id="aside1">
+     <img src=".\img\q.webp" alt="шайлушай3">
+        </aside>
+
+        
+        
+        <video controls width="250">
+            <source src="C:\Users\Ученик\Desktop\saytnew\website\img\Наполеон Смотрит На Наполеона 5 Минут.webm" type="video/webm" />
+          
+            <source src="C:\Users\Ученик\Desktop\saytnew\website\img\Наполеон Смотрит На Наполеона 5 Минут.mp4" type="video/mp4" />
+          
+            Download the
+            <a href="C:\Users\Ученик\Desktop\saytnew\website\img\Наполеон Смотрит На Наполеона 5 Минут.webm">WEBM</a>
+</video>
+<video controls width="250">
+    <source src="C:\Users\Ученик\Desktop\saytnew\website\img\ramaz.kz_2023-11-13-16-51-05_1699883465762.webm" type="video/webm" />
+  
+    <source src="C:\Users\Ученик\Desktop\saytnew\website\img\ramaz.kz_2023-11-13-16-51-05_1699883465762.mp4" type="video/mp4" />
+    
+
+</div>
+         
+        <h2> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> кица </a></h2>
+
+        <h3> <a href="https://www.youtube.com/watch?v=_QMEy8SY2OY"> ну ладно сейчас заходи </a> </h3>
         
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+    var a = document.querySelector('#aside1'), b = null, P = 1;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
+    window.addEventListener('scroll', Ascroll, false);
+    document.body.addEventListener('scroll', Ascroll, false);
+    function Ascroll() {
+      if (b == null) {
+        var Sa = getComputedStyle(a, ''), s = '';
+        for (var i = 0; i < Sa.length; i++) {
+          if (Sa[i].indexOf('box-sizing') == 0 || Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('width') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+            s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
+          }
+        }
+        a.innerHTML = '<div style="'+s+'">'+a.innerHTML+'</div>';
+        b = a.children[0];
+        a.style.height = b.getBoundingClientRect().height + 'px';
+        a.style.padding = '0';
+        a.style.border = '0';
+      }
+      var Ra = a.getBoundingClientRect(),
+          R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('footer').getBoundingClientRect().top + 0);  // селектор блока, при достижении верхнего края которого нужно открепить прилипающий элемент;  Math.round() только для IE; если ноль заменить на число, то блок будет прилипать до того, как нижний край элемента дойдёт до футера
+      if ((Ra.top - P) <= 0) {
+        if ((Ra.top - P) <= R) {
+          b.className = 'stop';
+          b.style.top = - R +'px';
+        } else {
+          b.className = 'sticky';
+          b.style.top = P + 'px';
+        }
+      } else {
+        b.className = '';
+        b.style.top = '';
+      }
+    }
+    })()
+    </script>
+    
