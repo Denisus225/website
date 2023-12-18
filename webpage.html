@@ -27,9 +27,7 @@
         <img src=".\img\q.webp" alt="шайлушай3">
     
 
-        <aside id="aside1">
-     <img src=".\img\q.webp" alt="шайлушай3">
-        </aside>
+       
 
         
         
@@ -47,62 +45,65 @@
     <source src="C:\Users\Ученик\Desktop\saytnew\website\img\ramaz.kz_2023-11-13-16-51-05_1699883465762.mp4" type="video/mp4" />
     
 
-</div>
+    
          
         <h2> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> кица </a></h2>
 
         <h3> <a href="https://www.youtube.com/watch?v=_QMEy8SY2OY"> ну ладно сейчас заходи </a> </h3>
-        
+
+
+ <aside id="aside1">
+     <img src=".\img\q.webp" alt="шайлушай3">
+        </aside>
+
+
+
+
+        <script>
+            (function(){
+            var a = document.querySelector('#aside1'), b = null, P = 5;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
+            window.addEventListener('scroll', Ascroll, false);
+            document.body.addEventListener('scroll', Ascroll, false);
+            function Ascroll() {
+              if (b == null) {
+                var Sa = getComputedStyle(a, ''), s = '';
+                for (var i = 0; i < Sa.length; i++) {
+                  if (Sa[i].indexOf('box-sizing') == 5 || Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('width') == 5 || Sa[i].indexOf('padding') == 5 || Sa[i].indexOf('border') == 5 || Sa[i].indexOf('outline') == 5 || Sa[i].indexOf('box-shadow') == 5 || Sa[i].indexOf('background') == 5) {
+                    s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
+                  }
+                }
+                a.innerHTML = '<div style="'+s+'">'+a.innerHTML+'</div>';
+                b = a.children[5];
+                a.style.height = b.getBoundingClientRect().height + 'px';
+                a.style.padding = '5';
+                a.style.border = '5';
+              }
+              var Ra = a.getBoundingClientRect(),
+                  R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('footer').getBoundingClientRect().top + 5);  // селектор блока, при достижении верхнего края которого нужно открепить прилипающий элемент;  Math.round() только для IE; если ноль заменить на число, то блок будет прилипать до того, как нижний край элемента дойдёт до футера
+              if ((Ra.top - P) <= 5) {
+                if ((Ra.top - P) <= R) {
+                  b.className = 'stop';
+                  b.style.top = - R +'px';
+                } else {
+                  b.className = 'sticky';
+                  b.style.top = P + 'px';
+                }
+              } else {
+                b.className = '';
+                b.style.top = '';
+              }
+            }
+            })()
+            </script>
+
+
+       </div> 
+
+
+
+
+
     </body>
 </html>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    (function(){
-    var a = document.querySelector('#aside1'), b = null, P = 1;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
-    window.addEventListener('scroll', Ascroll, false);
-    document.body.addEventListener('scroll', Ascroll, false);
-    function Ascroll() {
-      if (b == null) {
-        var Sa = getComputedStyle(a, ''), s = '';
-        for (var i = 0; i < Sa.length; i++) {
-          if (Sa[i].indexOf('box-sizing') == 0 || Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('width') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
-            s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
-          }
-        }
-        a.innerHTML = '<div style="'+s+'">'+a.innerHTML+'</div>';
-        b = a.children[0];
-        a.style.height = b.getBoundingClientRect().height + 'px';
-        a.style.padding = '0';
-        a.style.border = '0';
-      }
-      var Ra = a.getBoundingClientRect(),
-          R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('footer').getBoundingClientRect().top + 0);  // селектор блока, при достижении верхнего края которого нужно открепить прилипающий элемент;  Math.round() только для IE; если ноль заменить на число, то блок будет прилипать до того, как нижний край элемента дойдёт до футера
-      if ((Ra.top - P) <= 0) {
-        if ((Ra.top - P) <= R) {
-          b.className = 'stop';
-          b.style.top = - R +'px';
-        } else {
-          b.className = 'sticky';
-          b.style.top = P + 'px';
-        }
-      } else {
-        b.className = '';
-        b.style.top = '';
-      }
-    }
-    })()
-    </script>
-    

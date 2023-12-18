@@ -14,3 +14,14 @@ padding: 6%;
 *{
     box-sizing: content-box;
 }
+
+<style>
+.sticky {
+  position: fixed;
+  z-index: 101;
+}
+.stop {
+  position: relative;
+  z-index: 101;
+}
+</style>
